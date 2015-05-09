@@ -1,0 +1,216 @@
+Process:               test-vibe-threads [23750]
+Path:                  /Users/USER/*/test-vibe-threads
+Identifier:            test-vibe-threads
+Version:               0
+Code Type:             X86-64 (Native)
+Parent Process:        zsh [14794]
+Responsible:           Terminal [439]
+User ID:               501
+
+Date/Time:             2015-05-09 19:44:26.502 +0200
+OS Version:            Mac OS X 10.10.3 (14D136)
+Report Version:        11
+Anonymous UUID:        22F8317F-CEC5-C2CC-A3D3-A7BFAC57C574
+
+Sleep/Wake UUID:       AFD20535-A9A5-4785-AFA2-AA0E6C29D792
+
+Time Awake Since Boot: 230000 seconds
+Time Since Wake:       20000 seconds
+
+Crashed Thread:        1
+
+Exception Type:        EXC_BAD_ACCESS (SIGSEGV)
+Exception Codes:       KERN_INVALID_ADDRESS at 0x0000000000000000
+
+VM Regions Near 0:
+--> 
+    __TEXT                 0000000102be7000-0000000102e01000 [ 2152K] r-x/rwx SM=COW  /Users/USER/*
+
+Thread 0:: Dispatch queue: com.apple.main-thread
+0   libsystem_kernel.dylib        	0x00007fff91c6621a kevent + 10
+1   libevent-2.0.5.dylib          	0x00000001037823e6 event_base_loop + 932
+2   test-vibe-threads             	0x0000000102cafca8 D4vibe4core7drivers9libevent215Libevent2Driver12runEventLoopMFZi + 80
+3   test-vibe-threads             	0x0000000102ca97c6 D4vibe4core4core12runEventLoopFZi + 254
+4   test-vibe-threads             	0x0000000102be857b _Dmain + 323
+5   test-vibe-threads             	0x0000000102d90820 D2rt6dmain211_d_run_mainUiPPaPUAAaZiZ6runAllMFZ9__lambda1MFZv + 40
+6   test-vibe-threads             	0x0000000102d90765 D2rt6dmain211_d_run_mainUiPPaPUAAaZiZ7tryExecMFMDFZvZv + 45
+7   test-vibe-threads             	0x0000000102d907c5 D2rt6dmain211_d_run_mainUiPPaPUAAaZiZ6runAllMFZv + 45
+8   test-vibe-threads             	0x0000000102d90765 D2rt6dmain211_d_run_mainUiPPaPUAAaZiZ7tryExecMFMDFZvZv + 45
+9   test-vibe-threads             	0x0000000102d906d8 _d_run_main + 504
+10  test-vibe-threads             	0x0000000102be85a2 main + 34
+11  libdyld.dylib                 	0x00007fff938825c9 start + 1
+
+Thread 1 Crashed:
+0   test-vibe-threads             	0x0000000102cb9441 onSocketEvent + 1061
+1   libevent-2.0.5.dylib          	0x000000010378b5ac bufferevent_readcb + 293
+2   libevent-2.0.5.dylib          	0x0000000103782784 event_base_loop + 1858
+3   test-vibe-threads             	0x0000000102cafca8 D4vibe4core7drivers9libevent215Libevent2Driver12runEventLoopMFZi + 80
+4   test-vibe-threads             	0x0000000102ca97c6 D4vibe4core4core12runEventLoopFZi + 254
+5   test-vibe-threads             	0x0000000102cabdc5 D4vibe4core4core16workerThreadFuncFNbZv + 141
+6   test-vibe-threads             	0x0000000102d81680 D4core6thread6Thread3runMFZv + 28
+7   test-vibe-threads             	0x0000000102d80dc9 thread_entryPoint + 189
+8   libsystem_pthread.dylib       	0x00007fff962d0268 _pthread_body + 131
+9   libsystem_pthread.dylib       	0x00007fff962d01e5 _pthread_start + 176
+10  libsystem_pthread.dylib       	0x00007fff962ce41d thread_start + 13
+
+Thread 2:
+0   libsystem_kernel.dylib        	0x00007fff91c666c0 readv + 0
+1   libevent-2.0.5.dylib          	0x000000010378b523 bufferevent_readcb + 156
+2   libevent-2.0.5.dylib          	0x0000000103782784 event_base_loop + 1858
+3   test-vibe-threads             	0x0000000102cafca8 D4vibe4core7drivers9libevent215Libevent2Driver12runEventLoopMFZi + 80
+4   test-vibe-threads             	0x0000000102ca97c6 D4vibe4core4core12runEventLoopFZi + 254
+5   test-vibe-threads             	0x0000000102cabdc5 D4vibe4core4core16workerThreadFuncFNbZv + 141
+6   test-vibe-threads             	0x0000000102d81680 D4core6thread6Thread3runMFZv + 28
+7   test-vibe-threads             	0x0000000102d80dc9 thread_entryPoint + 189
+8   libsystem_pthread.dylib       	0x00007fff962d0268 _pthread_body + 131
+9   libsystem_pthread.dylib       	0x00007fff962d01e5 _pthread_start + 176
+10  libsystem_pthread.dylib       	0x00007fff962ce41d thread_start + 13
+
+Thread 3:
+0   libsystem_kernel.dylib        	0x00007fff91c6621a kevent + 10
+1   libevent-2.0.5.dylib          	0x00000001037823e6 event_base_loop + 932
+2   test-vibe-threads             	0x0000000102cafca8 D4vibe4core7drivers9libevent215Libevent2Driver12runEventLoopMFZi + 80
+3   test-vibe-threads             	0x0000000102ca97c6 D4vibe4core4core12runEventLoopFZi + 254
+4   test-vibe-threads             	0x0000000102cabdc5 D4vibe4core4core16workerThreadFuncFNbZv + 141
+5   test-vibe-threads             	0x0000000102d81680 D4core6thread6Thread3runMFZv + 28
+6   test-vibe-threads             	0x0000000102d80dc9 thread_entryPoint + 189
+7   libsystem_pthread.dylib       	0x00007fff962d0268 _pthread_body + 131
+8   libsystem_pthread.dylib       	0x00007fff962d01e5 _pthread_start + 176
+9   libsystem_pthread.dylib       	0x00007fff962ce41d thread_start + 13
+
+Thread 4:
+0   libsystem_kernel.dylib        	0x00007fff91c6621a kevent + 10
+1   libevent-2.0.5.dylib          	0x00000001037823e6 event_base_loop + 932
+2   test-vibe-threads             	0x0000000102cafca8 D4vibe4core7drivers9libevent215Libevent2Driver12runEventLoopMFZi + 80
+3   test-vibe-threads             	0x0000000102ca97c6 D4vibe4core4core12runEventLoopFZi + 254
+4   test-vibe-threads             	0x0000000102cabdc5 D4vibe4core4core16workerThreadFuncFNbZv + 141
+5   test-vibe-threads             	0x0000000102d81680 D4core6thread6Thread3runMFZv + 28
+6   test-vibe-threads             	0x0000000102d80dc9 thread_entryPoint + 189
+7   libsystem_pthread.dylib       	0x00007fff962d0268 _pthread_body + 131
+8   libsystem_pthread.dylib       	0x00007fff962d01e5 _pthread_start + 176
+9   libsystem_pthread.dylib       	0x00007fff962ce41d thread_start + 13
+
+Thread 1 crashed with X86 Thread State (64-bit):
+  rax: 0x00007fb132512988  rbx: 0x00007fb132514640  rcx: 0x0000000000000000  rdx: 0x00007fb132512988
+  rdi: 0x0000000000000000  rsi: 0x0000000000000000  rbp: 0x00000001039b6c00  rsp: 0x00000001039b6b10
+   r8: 0x0000000000000002   r9: 0x00000001039b7000  r10: 0xffffffffffffffff  r11: 0x0000000000000246
+  r12: 0x0000000000004000  r13: 0x00007fb132700288  r14: 0x00007fb132602738  r15: 0x0000000000000000
+  rip: 0x0000000102cb9441  rfl: 0x0000000000010297  cr2: 0x0000000000000000
+  
+Logical CPU:     1
+Error Code:      0x00000004
+Trap Number:     14
+
+
+Binary Images:
+       0x102be7000 -        0x102e00fff +test-vibe-threads (0) <64C87CF2-150B-306A-96B6-50E79EB6F0EF> /Users/USER/*/test-vibe-threads
+       0x103779000 -        0x10377afff +libevent_pthreads-2.0.5.dylib (0) <784CCF91-F76B-375C-8E19-D9078B2DB446> /usr/local/lib/libevent_pthreads-2.0.5.dylib
+       0x10377f000 -        0x1037a7ff7 +libevent-2.0.5.dylib (0) <C1B544F2-35D7-371B-A607-3B8D1092FBFB> /usr/local/lib/libevent-2.0.5.dylib
+       0x1037bc000 -        0x1037f2ff7  libssl.0.9.8.dylib (52.20.2) <CF2F5CC1-A72E-3ECF-8F98-330ABABBAFD1> /usr/lib/libssl.0.9.8.dylib
+    0x7fff6b42c000 -     0x7fff6b462837  dyld (353.2.1) <65DCCB06-339C-3E25-9702-600A28291D0E> /usr/lib/dyld
+    0x7fff89b69000 -     0x7fff89c4dfff  libcrypto.0.9.8.dylib (52.20.2) <977DA067-2588-3BF8-A7B2-F08FC6E9088F> /usr/lib/libcrypto.0.9.8.dylib
+    0x7fff89c4e000 -     0x7fff89c56fff  libsystem_platform.dylib (63) <64E34079-D712-3D66-9CE2-418624A5C040> /usr/lib/system/libsystem_platform.dylib
+    0x7fff8a76e000 -     0x7fff8a79efff  libsystem_m.dylib (3086.1) <1E12AB45-6D96-36D0-A226-F24D9FB0D9D6> /usr/lib/system/libsystem_m.dylib
+    0x7fff8a79f000 -     0x7fff8a7e5ff7  libauto.dylib (186) <A260789B-D4D8-316A-9490-254767B8A5F1> /usr/lib/libauto.dylib
+    0x7fff8b259000 -     0x7fff8b25ffff  libsystem_trace.dylib (72.20.1) <840F5301-B55A-3078-90B9-FEFFD6CD741A> /usr/lib/system/libsystem_trace.dylib
+    0x7fff8b2cc000 -     0x7fff8b2cdff3  libSystem.B.dylib (1213) <CCEC13A5-D0D9-31C5-B0B0-1C564B4A20A6> /usr/lib/libSystem.B.dylib
+    0x7fff8b2ce000 -     0x7fff8b2d9fff  libcommonCrypto.dylib (60061) <D381EBC6-69D8-31D3-8084-5A80A32CB748> /usr/lib/system/libcommonCrypto.dylib
+    0x7fff8b352000 -     0x7fff8b358ff7  libsystem_networkextension.dylib (167.1.10) <29AB225B-D7FB-30ED-9600-65D44B9A9442> /usr/lib/system/libsystem_networkextension.dylib
+    0x7fff8b6cb000 -     0x7fff8b6d0fff  libsystem_stats.dylib (163.20.16) <FBC3F80F-A0FB-3BD6-9A7E-800DE45F092E> /usr/lib/system/libsystem_stats.dylib
+    0x7fff8b767000 -     0x7fff8b7bbfff  libc++.1.dylib (120) <1B9530FD-989B-3174-BB1C-BDC159501710> /usr/lib/libc++.1.dylib
+    0x7fff8c9aa000 -     0x7fff8c9b2fff  libsystem_dnssd.dylib (561.1.1) <62B70ECA-E40D-3C63-896E-7F00EC386DDB> /usr/lib/system/libsystem_dnssd.dylib
+    0x7fff8c9b3000 -     0x7fff8c9b3ff7  liblaunch.dylib (559.20.9) <FA89A113-696E-3271-8FE1-A0D7324E8481> /usr/lib/system/liblaunch.dylib
+    0x7fff8e646000 -     0x7fff8e66efff  libxpc.dylib (559.20.9) <D35D0DB2-D7BD-3BE4-8378-062BFE545E1D> /usr/lib/system/libxpc.dylib
+    0x7fff8e66f000 -     0x7fff8e670fff  com.apple.TrustEvaluationAgent (2.0 - 25) <2D61A2C3-C83E-3A3F-8EC1-736DBEC250AB> /System/Library/PrivateFrameworks/TrustEvaluationAgent.framework/Versions/A/TrustEvaluationAgent
+    0x7fff8e671000 -     0x7fff8e676ff7  libmacho.dylib (862) <126CA2ED-DE91-308F-8881-B9DAEC3C63B6> /usr/lib/system/libmacho.dylib
+    0x7fff8e677000 -     0x7fff8e688ff7  libz.1.dylib (55) <88C7C7DE-04B8-316F-8B74-ACD9F3DE1AA1> /usr/lib/libz.1.dylib
+    0x7fff8e70e000 -     0x7fff8e738ff7  libdispatch.dylib (442.1.4) <502CF32B-669B-3709-8862-08188225E4F0> /usr/lib/system/libdispatch.dylib
+    0x7fff8e8cd000 -     0x7fff8e943fe7  libcorecrypto.dylib (233.1.2) <E1789801-3985-3949-B736-6B3378873301> /usr/lib/system/libcorecrypto.dylib
+    0x7fff8e947000 -     0x7fff8e949fff  libquarantine.dylib (76.20.1) <7AF90041-2768-378A-925A-D83161863642> /usr/lib/system/libquarantine.dylib
+    0x7fff8eb06000 -     0x7fff8eb22ff7  libsystem_malloc.dylib (53.1.1) <19BCC257-5717-3502-A71F-95D65AFA861B> /usr/lib/system/libsystem_malloc.dylib
+    0x7fff8eb91000 -     0x7fff8eb93ff7  libsystem_coreservices.dylib (9) <41B7C578-5A53-31C8-A96F-C73E030B0938> /usr/lib/system/libsystem_coreservices.dylib
+    0x7fff8f03e000 -     0x7fff8f04ffff  libsystem_coretls.dylib (35.20.2) <6084A531-2523-39F8-B030-811FA1A32FB5> /usr/lib/system/libsystem_coretls.dylib
+    0x7fff8f676000 -     0x7fff8f677fff  libsystem_secinit.dylib (18) <581DAD0F-6B63-3A48-B63B-917AF799ABAA> /usr/lib/system/libsystem_secinit.dylib
+    0x7fff8f678000 -     0x7fff8f6a0fff  libsystem_info.dylib (459.20.1) <AEB3FE62-4763-3050-8352-D6F9AF961AE6> /usr/lib/system/libsystem_info.dylib
+    0x7fff91913000 -     0x7fff91918ff7  libunwind.dylib (35.3) <BE7E51A0-B6EA-3A54-9CCA-9D88F683A6D6> /usr/lib/system/libunwind.dylib
+    0x7fff91923000 -     0x7fff91927fff  libcache.dylib (69) <45E9A2E7-99C4-36B2-BEE3-0C4E11614AD1> /usr/lib/system/libcache.dylib
+    0x7fff91aaf000 -     0x7fff91ac5ff7  libsystem_asl.dylib (267) <F153AC5B-0542-356E-88C8-20A62CA704E2> /usr/lib/system/libsystem_asl.dylib
+    0x7fff91c4f000 -     0x7fff91c6cfff  libsystem_kernel.dylib (2782.20.48) <EAFD7BD0-0C30-3E7D-9528-F9916BA0167C> /usr/lib/system/libsystem_kernel.dylib
+    0x7fff920e7000 -     0x7fff920e7ff7  libunc.dylib (29) <5676F7EA-C1DF-329F-B006-D2C3022B7D70> /usr/lib/system/libunc.dylib
+    0x7fff92bef000 -     0x7fff92bf7ffb  libcopyfile.dylib (118.1.2) <0C68D3A6-ACDD-3EF3-991A-CC82C32AB836> /usr/lib/system/libcopyfile.dylib
+    0x7fff92f0e000 -     0x7fff92f0fffb  libremovefile.dylib (35) <3485B5F4-6CE8-3C62-8DFD-8736ED6E8531> /usr/lib/system/libremovefile.dylib
+    0x7fff9301b000 -     0x7fff93046fff  libc++abi.dylib (125) <88A22A0F-87C6-3002-BFBA-AC0F2808B8B9> /usr/lib/libc++abi.dylib
+    0x7fff93367000 -     0x7fff9356146f  libobjc.A.dylib (647) <759E155D-BC42-3D4E-869B-6F57D477177C> /usr/lib/libobjc.A.dylib
+    0x7fff9387f000 -     0x7fff93882ff7  libdyld.dylib (353.2.1) <9EACCA38-291D-38CC-811F-7E9D1451E2D3> /usr/lib/system/libdyld.dylib
+    0x7fff9389e000 -     0x7fff9389eff7  libkeymgr.dylib (28) <77845842-DE70-3CC5-BD01-C3D14227CED5> /usr/lib/system/libkeymgr.dylib
+    0x7fff9391e000 -     0x7fff93925ff7  libcompiler_rt.dylib (35) <BF8FC133-EE10-3DA6-9B90-92039E28678F> /usr/lib/system/libcompiler_rt.dylib
+    0x7fff9416a000 -     0x7fff94173ff7  libsystem_notify.dylib (133.1.1) <61147800-F320-3DAA-850C-BADF33855F29> /usr/lib/system/libsystem_notify.dylib
+    0x7fff95938000 -     0x7fff95970fff  libsystem_network.dylib (412.20.3) <589A5F67-BE2A-3245-A181-0ECC9B53EB00> /usr/lib/system/libsystem_network.dylib
+    0x7fff959db000 -     0x7fff959ddfff  libsystem_sandbox.dylib (358.20.5) <4CF77128-6BE0-3958-B646-707FA9CE61B2> /usr/lib/system/libsystem_sandbox.dylib
+    0x7fff959f4000 -     0x7fff95a80ff7  libsystem_c.dylib (1044.10.1) <86FBED7A-F2C8-3591-AD6F-486DD57E6B6A> /usr/lib/system/libsystem_c.dylib
+    0x7fff962cd000 -     0x7fff962d6fff  libsystem_pthread.dylib (105.10.1) <3103AA7F-3BAE-3673-9649-47FFD7E15C97> /usr/lib/system/libsystem_pthread.dylib
+    0x7fff9644c000 -     0x7fff9644dfff  libDiagnosticMessagesClient.dylib (100) <2EE8E436-5CDC-34C5-9959-5BA218D507FB> /usr/lib/libDiagnosticMessagesClient.dylib
+    0x7fff97081000 -     0x7fff97082ff7  libsystem_blocks.dylib (65) <9615D10A-FCA7-3BE4-AA1A-1B195DACE1A1> /usr/lib/system/libsystem_blocks.dylib
+    0x7fff97a56000 -     0x7fff97a58fff  libsystem_configuration.dylib (699.1.5) <20F3B077-179D-3CB0-A3C1-C8602D53B4DB> /usr/lib/system/libsystem_configuration.dylib
+
+External Modification Summary:
+  Calls made by other processes targeting this process:
+    task_for_pid: 7
+    thread_create: 0
+    thread_set_state: 0
+  Calls made by this process:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+  Calls made by all processes on this machine:
+    task_for_pid: 5037389
+    thread_create: 0
+    thread_set_state: 0
+
+VM Region Summary:
+ReadOnly portion of Libraries: Total=88.8M resident=62.4M(70%) swapped_out_or_unallocated=26.4M(30%)
+Writable regions: Total=387.6M written=1912K(0%) resident=2628K(1%) swapped_out=0K(0%) unallocated=385.1M(99%)
+ 
+REGION TYPE                      VIRTUAL
+===========                      =======
+Kernel Alloc Once                     4K
+MALLOC                             36.2M
+MALLOC (admin)                       16K
+STACK GUARD                        56.0M
+Stack                              10.0M
+VM_ALLOCATE                       341.1M
+__DATA                             1704K
+__LINKEDIT                         79.6M
+__TEXT                             9484K
+shared memory                         4K
+===========                      =======
+TOTAL                             533.8M
+
+Model: MacBookPro12,1, BootROM MBP121.0167.B02, 2 processors, Intel Core i7, 3.1 GHz, 16 GB, SMC 2.28f6
+Graphics: Intel Iris Graphics 6100, Intel Iris Graphics 6100, Built-In
+Memory Module: BANK 0/DIMM0, 8 GB, DDR3, 1867 MHz, 0x02FE, 0x4544464232333241314D412D4A442D460000
+Memory Module: BANK 1/DIMM0, 8 GB, DDR3, 1867 MHz, 0x02FE, 0x4544464232333241314D412D4A442D460000
+AirPort: spairport_wireless_card_type_airport_extreme (0x14E4, 0x133), Broadcom BCM43xx 1.0 (7.15.166.24.3)
+Bluetooth: Version 4.3.4f4 15601, 3 services, 18 devices, 1 incoming serial ports
+Network Service: Display Ethernet, Ethernet, en3
+PCI Card: Apple 57761-B0, Ethernet Controller, Thunderbolt@191,0,0
+PCI Card: pci11c1,5901, IEEE 1394 Open HCI, Thunderbolt@190,0,0
+PCI Card: pci12d8,400e, USB Open Host Controller, Thunderbolt@196,0,0
+PCI Card: pci12d8,400e, USB Open Host Controller, Thunderbolt@196,0,1
+PCI Card: pci12d8,400f, USB Enhanced Host Controller, Thunderbolt@196,0,2
+Serial ATA Device: APPLE SSD SM1024G, 1 TB
+USB Device: Internal Memory Card Reader
+USB Device: Bluetooth USB Host Controller
+USB Device: Hub
+USB Device: EDIROL UA-25
+USB Device: USB2.0 Hub
+USB Device: USB Laser Mouse
+USB Device: Composite Device
+USB Device: FaceTime HD Camera (Display)
+USB Device: Apple Thunderbolt Display
+USB Device: Display Audio
+Thunderbolt Bus: MacBook Pro, Apple Inc., 27.1
+Thunderbolt Device: Thunderbolt Display, Apple Inc., 1, 26.2
+
+
+
