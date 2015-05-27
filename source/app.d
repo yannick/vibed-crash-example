@@ -18,14 +18,15 @@ static void main()
   auto router = new URLRouter;
   router.get("/a", &routea);
   router.get("/b", &routeb);
+  router.get("/c", &routec);
   
   auto settings = new HTTPServerSettings;
   settings.port = 9090;
   settings.bindAddresses = ["0.0.0.0"];
   settings.options = settings.options 
       | HTTPServerOption.parseCookies
-      | HTTPServerOption.parseQueryString
-      | HTTPServerOption.distribute  ;
+      | HTTPServerOption.parseQueryString;
+//  settings.options = settings.options  | HTTPServerOption.distribute  ;
     
   listenHTTP(settings, router);
   

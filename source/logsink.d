@@ -4,6 +4,7 @@ import routes;
 import vibe.core.core;
 import vibe.core.concurrency;
 import std.concurrency : OwnerTerminated, Variant;
+import vibe.http.client;
 
 __gshared Task gs_logsink;
 
@@ -30,7 +31,20 @@ static void logSink()
 
           (Ack a) 
           {
+            writeln("removed log!", a); 
             logstore.remove(a.id);
+            
+            
+            //lets simulate a "few" call to a backend
+            runTask( { 
+              int i = 0;
+              while( i < 1000){
+                  auto resp = requestHTTP("http://localhost:9090/c", (scope req) { });
+                  resp.dropBody();
+                  i++;
+              }
+            });
+              
           }, 
           
           (Variant v) 
